@@ -5,11 +5,10 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 class FibonacciNumbers
-  attr_accessor :fibonacciNumbersArray, :even_fibonacci_array
+  attr_accessor :fibonacciNumbersArray
 
   def initialize
     @fibonacciNumbersArray = [0,1]
-    @even_fibonacci_array = []
   end
 
   def fibonacci(max)
@@ -20,20 +19,18 @@ class FibonacciNumbers
         @fibonacciNumbersArray << sum
         i +=1
       end
-    @fibonacciNumbersArray
+      print @fibonacciNumbersArray
     # @fibonacciNumbersArray
-  end
-
-  def even(@fibonacciNumbersArray)
-    for i in (0..@fibonacciNumbersArray.length-1)
-      if @fibonacciNumbersArray[i].even?
-        @even_fibonacci_array << i
+    even_num = 0
+    @fibonacciNumbersArray.each do |fbn|
+      if fbn %2 == 0
+        print fbn
+      else
+        @fibonacciNumbersArray
       end
     end
   end
-
-
 end
 
-fibo = FibonacciNumbers.new
-print fibo.fibonacci(4000000)
+fibon = FibonacciNumbers.new
+print fibon.fibonacci(4000000)
