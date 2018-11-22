@@ -19,12 +19,12 @@ class FibonacciNumbers
         @fibonacciNumbersArray << sum
         i +=1
       end
-      print @fibonacciNumbersArray
+      @fibonacciNumbersArray
     # @fibonacciNumbersArray
     even_num = 0
     @fibonacciNumbersArray.each do |fbn|
       if fbn %2 == 0
-        print fbn
+        fbn
       else
         @fibonacciNumbersArray
       end
@@ -32,5 +32,5 @@ class FibonacciNumbers
   end
 end
 
-fibon = FibonacciNumbers.new
-print fibon.fibonacci(4000000)
+# fibon = FibonacciNumbers.new
+# print fibon.fibonacci(4000000)
