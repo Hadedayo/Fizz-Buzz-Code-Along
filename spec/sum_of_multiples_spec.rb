@@ -22,31 +22,10 @@ require "spec_helper"
       expect(@mp.multiple_of?(31,5)).to be false
     end
 
-    it "should correctly show the multiples of 3 or 5 between the range 1 and 1000" do
-      @mp.multiples_iterator(1,1000)
-      puts @mp.true_multiples_array
-    end
-
     it "should correctly show the SUM of the multiples of 3 or 5 between the range 1 and 1000" do
-      puts @mp.sum_of_multiples
+      @mp.multiples_iterator(1,1000)
+      expect(@mp.sum_of_multiples).to eq 233168
     end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
