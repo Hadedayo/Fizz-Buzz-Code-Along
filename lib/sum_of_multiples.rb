@@ -16,24 +16,17 @@ class SumofMultiples
   end
 
   def multiples_iterator (range_from, range_to)
-    (range_from..range_to).each do |i|
+    (range_from...range_to).each do |i|
       if multiple_of?(i,3) || multiple_of?(i,5)
         @true_multiples_array << i
       end
     end
-
+      @true_multiples_array
   end
 
   def sum_of_multiples
-    sum = 0
-    for i in (0...true_multiples_array.length-1)
-      sum += @true_multiples_array[i]
-    end
-      puts sum
+    @true_multiples_array.sum
   end
-
-
-
 
 
 end
